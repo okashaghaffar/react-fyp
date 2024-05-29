@@ -73,7 +73,7 @@ export default function Home() {
   };
 
   const handleFormSubmit = async () => {
-    const apiUrl = 'https://b3b7-34-168-218-110.ngrok-free.app/generatemom';
+    const apiUrl = 'https://59aa-34-28-24-151.ngrok-free.app/generatemom';
 
     const formData = new FormData();
     formData.append('file', audioFile);
