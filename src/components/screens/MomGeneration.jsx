@@ -3,7 +3,7 @@ import { FaRegFileAudio } from "react-icons/fa";
 import Sidebar from "../Sidebar";
 
 export default function MomGeneration() {
-  const [api, setApi] = useState("");
+  // const [api, setApi] = useState("");
 
   useEffect(() => {}, []);
   
@@ -20,13 +20,13 @@ export default function MomGeneration() {
   const handleFormSubmit = async () => {
     // await fetch(`${api}get/url`).then((res) => setApi(res.data));
 
-    // const apiUrl = "https://59aa-34-28-24-151.ngrok-free.app/generatemom";
+    const apiUrl = "https://59aa-34-28-24-151.ngrok-free.app/generatemom";
     const formData = new FormData();
     formData.append("file", audioFile);
 
     try {
       setLoadingAudio(true);
-      const response = await fetch(`${api}/generatemom`, {
+      const response = await fetch(apiUrl, {
         method: "POST",
         body: formData,
       });
@@ -73,34 +73,7 @@ export default function MomGeneration() {
             <h1 className="text-3xl font-semibold mb-6">
               Generate MOM Document from Audio File
             </h1>
-            <div className="flex flex-col">
-              <label
-                className="block text-white  font-medium mb-2"
-                htmlFor="email"
-              >
-                Enter your API Key
-              </label>
-
-              <div className="relative text-white">
-                <div className="absolute top-1 left-1 bg-white-medium rounded-full  p-3 flex items-center justify-center text-white">
-                  <span className="absolute items-center flex ">
-                    
-                  </span>
-                </div>
-
-                <input
-                  type="text"
-                  id="email"
-                  placeholder="Email Address"
-                  name="email"
-                  value={api}
-                  onChange={(e) => {
-                    setApi(e.target.value);
-                  }}
-                  className="w-full text-white bg-white-light py-2 px-5 rounded-full focus:bg-black-dark focus:outline-none focus:ring-1 focus:ring-[#0fc7e3] focus:drop-shadow-lg"
-                />
-              </div>
-            </div>
+         
 
             <div className="mt-6 flex flex-row  justify-between">
               <div className="">
