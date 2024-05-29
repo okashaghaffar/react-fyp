@@ -115,7 +115,7 @@ export default function Login() {
           {/* <img src={img} alt="Description of image" className="w-[15%]" /> */}
 
           <h1 className="text-5xl font-bold text-white flex items-center">
-            Welco2
+            Welcome123
             <span className="ml-4">
               <img src={myGif} alt="Animated GIF" className="h-22 w-20 rotate-35" />
             </span>
